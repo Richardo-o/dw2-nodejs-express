@@ -17,8 +17,20 @@ app.get("/", (req, res)=>{
 
 // ROTA DE PERFIL
 
-app.get("/perfil", (req,res)=>{
-    res.render("perfil");
+app.get("/perfil/:perfil?", (req,res)=>{
+
+    //Coletando o parâmetro da rota
+    const perfil = req.params.perfil;
+
+    res.render("perfil",{
+        // Eviando a variável que é chamada na pagina
+        perfil : perfil
+
+        
+    });
+
+   
+
 });
 
 // ROTA DE PRODUTOS
