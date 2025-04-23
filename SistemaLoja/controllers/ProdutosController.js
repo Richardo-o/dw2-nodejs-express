@@ -27,6 +27,11 @@ router.get("/produtos/", (req,res) =>{
             nome: "Fone Bluetooth",
             preco: 150,
             categoria: "Periféricos"
+        },
+        {
+            nome: "Chinelo",
+            preco: 30,
+            categoria: "Calçados"
         }
     ]
 
