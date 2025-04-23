@@ -38,6 +38,18 @@ app.get("/perfil/:perfil?", (req,res)=>{
 app.get("/produtos/:produto?", (req,res) =>{
     //Coletando o parâmetro da rota
     const produto = req.params.produto;
+
+    // Criando array de produtos
+
+    const produtos = ['Computador', 'Celular', 'Tablet', 'Notebook']
+
+    res.render("produtos",{
+
+        // Enviando variáveis para a página
+
+        produto : produto,
+        produtos : produtos
+    });
     res.render("produtos",{
         // Enviando a variável produto para a página
         produto : produto
@@ -45,7 +57,10 @@ app.get("/produtos/:produto?", (req,res) =>{
         // o produto da esquerda é a variável que é chamada na página
         // o produto no lado direito é o valor da variável
     });
-})
+
+
+   
+});
 
 // Iniciando servidor na porta 8080
 // O métdo listen do Express inicia um servidor
